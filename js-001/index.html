@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var students = ["Steve Jobs", "Jason Bourne", "Mark Broun", "Paul Okenfold", "Mical Stuart"];
+	var count = students.length;
+		document.write(students + "<br>");
+		document.write("Количество элементов в массиве = " + count + "<br>");
+		//or
+		document.write("Counts students = " + students.length + "<br>");
+
+	// push - добавляем элемент в конец масссива
+	students.push("ut4utc");
+		document.write(students + "<br>");
+	// unshift - добавляем элемент в начало массива
+	students.unshift("ut4utc");
+		document.write(students + "<br>");
+	// pop - удаляет элемент с конца массива
+	students.pop();
+		document.write(students + "<br>");
+	// shift - добавляем элемент в начало массива
+	students.shift();
+		document.write(students + "<br>");
+
+// *********** SPLICE(par1,par2) удаляет из массива элементы с par1 по par2
+	// находим первый элемент массива и удаляем из него 2 элемента
+	students.splice(1,2);
+		document.write(students + "<br>");
+	// добавляет элементы если второй параметр 0
+	students.splice(2,0,"Elton John","Mark Zukerberg");
+		document.write(students + "<br>");
+	// удаляем из массива c 4-го места 1-го человека, и добавляем нужные элементы
+	students.splice(4,1,"Eric Cleptan","Mic Jagger");
+		document.write(students + "<br>");
+
+	document.write(studCount)
+
+</script>
+</body>
+</html>
