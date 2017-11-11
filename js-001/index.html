@@ -6,38 +6,92 @@
 <body>
 
 <script type="text/javascript">
-	var students = ["Steve Jobs", "Jason Bourne", "Mark Broun", "Paul Okenfold", "Mical Stuart"];
-	var count = students.length;
-		document.write(students + "<br>");
-		document.write("Количество элементов в массиве = " + count + "<br>");
+	var students = ["Steve Jobs", "Jason Bourne", "Mark Broun", "Paul Okenfold", "Mical Stuart"]
+	var count = students.length
+		document.write(students + "<br>")
+		document.write("Количество элементов в массиве = " + count + "<br>")
 		//or
-		document.write("Counts students = " + students.length + "<br>");
+		document.write("Counts students = " + students.length + "<br>")
 
+
+// *********** PUSH, UNSHIFT, SHIFT, POP
+document.write( "<br><br>" + "******** PUSH, UNSHIFT, SHIFT, POP ********" + "<br><br>")
 	// push - добавляем элемент в конец масссива
-	students.push("ut4utc");
-		document.write(students + "<br>");
+	students.push("ut4utc")
+		document.write(students + "<br>")
 	// unshift - добавляем элемент в начало массива
-	students.unshift("ut4utc");
-		document.write(students + "<br>");
+	students.unshift("ut4utc")
+		document.write(students + "<br>")
 	// pop - удаляет элемент с конца массива
-	students.pop();
-		document.write(students + "<br>");
+	students.pop()
+		document.write(students + "<br>")
 	// shift - добавляем элемент в начало массива
-	students.shift();
-		document.write(students + "<br>");
+	students.shift()
+		document.write(students + "<br>")
+
 
 // *********** SPLICE(par1,par2) удаляет из массива элементы с par1 по par2
-	// находим первый элемент массива и удаляем из него 2 элемента
-	students.splice(1,2);
-		document.write(students + "<br>");
-	// добавляет элементы если второй параметр 0
-	students.splice(2,0,"Elton John","Mark Zukerberg");
-		document.write(students + "<br>");
-	// удаляем из массива c 4-го места 1-го человека, и добавляем нужные элементы
-	students.splice(4,1,"Eric Cleptan","Mic Jagger");
-		document.write(students + "<br>");
 
-	document.write(studCount)
+	document.write( "<br><br>" + "******** SPLICE удаляет из массива элементы с par1 по par2" + "<br><br>")
+	// находим первый элемент массива и удаляем из него 2 элемента
+	students.splice(1,2)
+		document.write(students + "<br>")
+	// добавляет элементы если второй параметр 0
+	students.splice(2,0,"Elton John","Mark Zukerberg")
+		document.write(students + "<br>")
+	// удаляем из массива c 4-го места 1-го человека, и добавляем нужные элементы
+	students.splice(4,1,"Eric Cleptan","Mic Jagger")
+		document.write(students + "<br>")
+
+
+// ******** REVERSE() - переворачивает массив с ног на голову
+
+	document.write( "<br><br>" + "******** REVERSE() - переворачивает массив с ног на голову" + "<br><br>")
+	document.write(students.reverse())
+
+// ******** sort() - сортировка массива по первому вхождению только не для чисел
+
+	document.write( "<br><br>" + "******** SORT() - сортировка массива по первому вхождению только не для чисел" + "<br><br>")
+	document.write(students.sort())
+
+// ******** join() - замена разделителя ',' на любой что укажем
+
+	document.write( "<br><br>" + "******** JOIN() - замена разделителя ',' на любой что укажем" + "<br><br>")
+	document.write(students.join("__/-^-\\__"))
+
+// ******** concat() - конкатенация массивов
+
+	document.write( "<br><br>" + "******** CONCAT() - конкатенация массивов" + "<br><br>")
+		students2 = ["Иванов", "Петров", "Сидоров"]
+			document.write(students.concat(students2))
+
+// ******** slice() - вырезка из массива
+
+	document.write( "<br><br>" + "******** SLICE() - вырезка из массива" + "<br><br>")
+		document.write(students.slice(1,3))
+
+
+// Многомерный массив
+	document.write( "<br><br>" + "******** Многомерный массив ********" + "<br><br>")
+		var col1 = ["abc", "def"]
+		var col2 = ["cba", "fed"]
+		var col3 = ["acb", "efd"]
+		
+		var myMerge = [col1, col2, col3]
+		
+		document.write(myMerge[1][1])
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 </body>
