@@ -115,7 +115,7 @@
 		// цикл while 
 		var i = 1
 		while (i <= 15) {
-			document.write(i + "<br>")
+			document.write( i + "<br>")
 			i++
 		}
 
@@ -131,12 +131,12 @@
 			document.write(students[i] + "<br>")
 		}
 		
-		document.write("<br><br>")
+	document.write("<br><br>")
 
 
 // методы объекта Window (open, alert, prompt, confirm )
 
-	document.write( "<br><br>" + "********  Циклы While && For  *********" + "<br><br>")	
+	document.write( "<br><br>" + "********  Window (open, alert, prompt, confirm )  *********" + "<br><br>")	
 	
 	// ссылка на новое окно
 	// var newWin = window.open("", "New window", "width=140", "heigth=120")
@@ -147,7 +147,7 @@
 
 	// prompt - вывод диалогового окна-запроса
 	// var age = prompt("Сколько вам лет?")
-		//alert("Ваш возраст " + age)
+	//	alert("Ваш возраст " + age)
 
 	// confirm() вывод окна-диалога 
 /*
@@ -174,10 +174,70 @@
 
  	document.write( "<br><br>" + "********  Функции  *********" + "<br><br>")	
 	
+	 	function pizza(name, adress) {
+	 		var pizzaName = "Нам нужна пица '" + name + "' По адресу: "+ adress;
+	 		return pizzaName 
+	 	}
+
+	 	document.write(pizza("С криветками","Платона 12/12"))
+
+	document.write("<br><br>")
+
+
+// String (toLowerCase, toUpperCase, indexOf, lastIndexOf, chaAt, charCodeAt) - работа со строками 
+
+	document.write( "<br><br>" + "********  String - работа со строками  *********" + "<br><br>")	
+
+		var str = "В этом слове 21 буква"
+			document.write(str.length + "<br>") 
+
+			document.write(str.toUpperCase() + "<br>")
+			document.write(str.toLowerCase() + "<br>")
+
+			var site = "https://wwww.mysite.com"
+
+			function checkHttps(name) {
+				var name = name
+				if ( name.indexOf("https://") !== -1 ) {
+					return "https"
+				} else {
+					return "http"
+				}
+			}
+			
+			document.write("У сайта " + site + " используется протокол " + checkHttps(site) + "<br>")
+						
+		
+		// Slice - вырезает и возвращает n кол-во символов
+		document.write(site.slice(8) + "<br>")
+
+
+		// Простой пример нахождения кирилического символа в алфавите
+		var name = "Иваh"
+		var alphabet ="абвгдеёжзийклмнопрстуфхцчщьъэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧЩЬЪЭЮЯ"
+
+		for (var i = 0; i < name.length; i++) {
+			document.write(name[i] + "<br><br>")
+		};
+
+		for (var i =0; i< name.length; i++) {
+			document.write(name.charAt(name[i]) + " ")
+			document.write(alphabet.indexOf(name[i]) + " ")
+
+			if ( alphabet.indexOf(name[i]) == -1 ) {
+				document.write("Буква <strong>" + name[i] + "</strong> не из кирилического алфавита <br>")
+			} else {
+				document.write("Буква <strong>" + name[i] + "</strong> из кирилического алфавита <br>")
+			}
+		
+		}
 
 
 
 
+
+
+	document.write("<br><br>")
 
 
 
