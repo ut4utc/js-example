@@ -232,6 +232,80 @@
 		
 		}
 
+	document.write("<br><br>")
+
+
+// Регулярные выражения Regular Expr (search, MATCH, )
+	
+	document.write( "<br><br>" + "********  Регулярные выражения  *********" + "<br><br>")	
+
+		var testPhrase = "Let it be"
+		var regV = /it/
+
+		var res = testPhrase.search(regV)
+			document.write(res)
+
+	document.write("<br><br>")
+
+
+// новый тест на регулярку
+	testPhrase2 = "12 медведей сидели на Слоне из 3-х миров"
+
+	function numTest(num) {
+		
+		var regV = /^\d/
+
+		if ( num.search(regV) == -1 ) {
+			document.write("Строка начинается не с цифры <br>")
+		} else {
+			document.write("Строка начинается с цифры <br>")
+		}
+	}
+
+	numTest(testPhrase2)
+
+
+	// метод Match - возвращает значение 893343342234
+	var testPhrase = "893343342234 Let it be"
+		var regV = /^\d*/
+
+		var res = testPhrase.match(regV)
+			document.write(res)
+
+	document.write("<br><br>")
+
+
+	// метод Match - второй пример 
+	var testPhrase = "Недавно я открыл сайты https://mysite.ua, www.mysupersite.ua, другой сай http://mysu.ua и http://www.2mysite.ua"
+		var regV = /^\d*/
+
+		var res = testPhrase.match(regV)
+			document.write(res)
+
+	document.write("<br><br>")
+
+
+	// метод Match - второй пример 
+	var nextPhrase = "Мои телефонные номера +38(050)05-20-222, 05005207222, другой телефон +3805005332222"
+		var regV = /\+\d{2}.{1}\d{3}/gi
+
+		var res = nextPhrase.match(regV)
+			document.write(res)
+
+	document.write("<br><br>")
+
+
+	// метод Replace https://learn.javascript.ru/regexp-methods 
+	var nextPhrase = "Мои телефонные номера +38(050)05-20-222, 05005207222, другой телефон +3805005332222"
+		var regV = /-/g
+
+		var res = nextPhrase.replace(regV, '')
+			document.write(res)
+
+	document.write("<br><br>")
+
+
+
 
 
 
