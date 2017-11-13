@@ -209,10 +209,12 @@
 						
 		
 		// Slice - вырезает и возвращает n кол-во символов
+
 		document.write(site.slice(8) + "<br>")
 
 
 		// Простой пример нахождения кирилического символа в алфавите
+
 		var name = "Иваh"
 		var alphabet ="абвгдеёжзийклмнопрстуфхцчщьъэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧЩЬЪЭЮЯ"
 
@@ -249,6 +251,7 @@
 
 
 // новый тест на регулярку
+
 	testPhrase2 = "12 медведей сидели на Слоне из 3-х миров"
 
 	function numTest(num) {
@@ -296,6 +299,7 @@
 
 
 	// метод Replace https://learn.javascript.ru/regexp-methods 
+
 	var nextPhrase = "Мои телефонные номера +38(050)05-20-222, 05005207222, другой телефон +3805005332222"
 		var regV = /-/g
 
@@ -306,18 +310,57 @@
 
 
 
+// Функции в js (isNaN) 
+	document.write( "<br><br>" + "********  Функции в js (isNaN)  *********" + "<br><br>")
+	
+	var fruit = "orange"
+	var number = 10
 
-
-
-
+	if (isNaN(fruit)) {
+		document.write("Это не число")
+	} else {
+		document.write(number + " - число")
+	}
 
 	document.write("<br><br>")
 
 
+// функция выводит из массива какой элемент текстовый а какой числовой
+	myarray = ["Milk", "Juse", "Bently", 40]  
+
+	function stringOrNumber(arr) {
+
+		for (var i = 0; i < arr.length; i++) {
+			if ( isNaN( arr[i] ) ) {
+				document.write(i + " "+ arr[i] + " - строка <br>")
+			} else {
+				document.write(i + " " + arr[i] + " - число <br>")
+			}
+		};
+	}
+
+	document.write(stringOrNumber(myarray))
+	document.write("<br><br>")
 
 
+	// parseInt(), parseFloat(), Number() - из Str->Int , number = true->1, float->0 
+	document.write( "<br><br>" + "******** parseInt(), parseFloat(), Number() - из Str->Int , number = true->1, float->0" + "<br><br>")
+	
+		var count = "36 orange juice"
+		var newcount = parseInt(count)
+		var test = 1 + newcount
+		
+		document.write(test)
+
+	document.write("<br><br>")
 
 
+	// метод toFixed(2) - позволяет показать кол-во ситволов после запятой
+	document.write( "<br><br>" + "******** метод toFixed(2) - позволяет показать кол-во ситволов после запятой" + "<br><br>")
+		var price = 10.30
+		document.write(price.toFixed(2))
+
+	document.write("<br><br>")
 
 
 
