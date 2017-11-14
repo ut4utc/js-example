@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -6,6 +6,10 @@
 <body>
 
 <script type="text/javascript">
+	// вызов performance.now() возвращает количество миллисекунд, прошедшее с начала загрузки страницы.
+	document.write(performance.now() + "<br><br>")
+	
+	// массивы
 	var students = ["Steve Jobs", "Jason Bourne", "Mark Broun", "Paul Okenfold", "Mical Stuart"]
 	var count = students.length
 		document.write(students + "<br>")
@@ -373,14 +377,53 @@
 	document.write("<br><br>")
 
 
+// объект Date 
+	document.write( "<br><br>" + "******** объект Date ********" + "<br><br>")
+		var date = new Date()
+		var year = date.getFullYear()
+		var month = date.getMonth()
+		var day = date.getDay()
+		if (day < 10 ) day = "0" + day
+		document.write(day + ":" + month + ":" + year + " |||  " )
+		
 
+	document.write("<br><br>")
+	
+	
+	// функция - узнаю сколько дней осталось до какой-то даты
+	document.write("<br><br>" + "******** функция - узнаю сколько дней осталось до какой-то даты ********" + "<br><br>>")
+	function dayToDay(num) {
+		var now = new Date()
+		var nowMil = now.getTime() // кол-во милисекунд от текушей даты до 1970
+		 
+		var findDate = new Date(1000*60*60*24*num) // узнаем сколько секунд в запрашиваемых днях
+		var findDateMil = findDate.getTime() // кол-во милисекунд до искомой даты + n дней
+		var summa = nowMil + findDateMil // сумма текущих секунд + сумма искомой даты
+		
+		var newdate = new Date(summa)
+		
+		return newdate
+	} 
 
+ 	document.write(dayToDay(47))
+	document.write("<br><br>")
+	
+	
+	// методы setTimeout(), setInterval(), clearInterval(), объекта window
+	document.write( "<br><br>" + "******** методы setTimeout(), setInterval(), clearInterval(), объекта window" + "<br><br>")
 
-
-
-
-
-
+	
+	function func() {
+		document.write("hello")
+	}
+	
+	//setTimeout() - вызов функции через заданный период времени
+	setTimeout(func(), 1000)
+	// setInterval()-запускает выполнение функции не один раз, а регулярно повторяет её через указанный интервал времени.
+	var idInt = setInterval(func(), 200)
+	clearInterval(idInt) // прекратит выполнение интервала
+	
+	document.write("<br><br>")
 
 
 
