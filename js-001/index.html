@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Javascript</title>
 </head>
 <body>
 
 <script type="text/javascript">
-	// вызов performance.now() возвращает количество миллисекунд, прошедшее с начала загрузки страницы.
-	document.write(performance.now() + "<br><br>")
-	
-	// массивы
+// вызов performance.now() возвращает количество миллисекунд, прошедшее с начала загрузки страницы.
+document.write(performance.now() + "<br><br>")
+
+/*##################################################################################
+###################################################################################	
+################################     МАССИВЫ      #################################	
+###################################################################################	
+##################################################################################*/
+
+document.write( "<br><br>" + "********  Массивы  ********" + "<br><br>")
+
 	var students = ["Steve Jobs", "Jason Bourne", "Mark Broun", "Paul Okenfold", "Mical Stuart"]
 	var count = students.length
 		document.write(students + "<br>")
@@ -18,9 +26,13 @@
 		document.write("Counts students = " + students.length + "<br>")
 
 
-// *********** PUSH, UNSHIFT, SHIFT, POP
+/*#################################################################################
+###################################################################################	
+#######################     PUSH, UNSHIFT, SHIFT, POP     #########################	
+###################################################################################	
+##################################################################################*/
 
-	document.write( "<br><br>" + "********  PUSH, UNSHIFT, SHIFT, POP  ********" + "<br><br>")
+document.write( "<br><br>" + "********  PUSH, UNSHIFT, SHIFT, POP  ********" + "<br><br>")
 	// push - добавляем элемент в конец масссива
 	students.push("ut4utc")
 		document.write(students + "<br>")
@@ -78,7 +90,7 @@
 
 // Многомерный массив
 
-	document.write( "<br><br>" + "********  Многомерный массив  ********" + "<br><br>")
+document.write( "<br><br>" + "********  Многомерный массив  ********" + "<br><br>")
 		var col1 = ["abc", "def"]
 		var col2 = ["cba", "fed"]
 		var col3 = ["acb", "efd"]
@@ -90,7 +102,7 @@
 
 // Условные операторы 
 
-	document.write( "<br><br>" + "********  Условные операторы if,else  *********" + "<br><br>")
+document.write( "<br><br>" + "********  Условные операторы if,else  *********" + "<br><br>")
 		
 		var weather = "sunny"
 		var gasoline = "true"
@@ -112,7 +124,17 @@
 		}
  
 
-// Циклы While && For
+	// тернарный оператор
+	
+	document.write( "<br><br>" + "********  тернарный оператор  *********" + "<br><br>")
+	var apple = 5
+	var orange = 5
+	var result = (apple == orange) ? "Кол-во равно" : "Разное кол-во"
+	document.write(result)
+	document.write("<br><br>")
+	
+	
+	// Циклы While && For
 
 	document.write( "<br><br>" + "********  Циклы While && For  *********" + "<br><br>")
 		
@@ -452,6 +474,24 @@
 	document.write("<br><br>")
 	
 
+// создание объектов new Object() или через {}
+document.write( "<br><br>" + "******** создание объектов new Object() " + "<br><br>")
+	var car = new Object();
+		car.color = "white"
+		car.maxSpeed = 220
+		car.brand = "Nissan"
+
+	document.write("Машина " + car.brand + "<br>")
+	document.write("Скорость " + car.maxSpeed + "<br>")
+	document.write("Цвет " + car.color + "<br><br>")
+
+	// второй способ создания объекта
+	var moto = {
+		color: "blue",
+		maxSpeed: 300,
+		brand: "Yamaha"
+	}
+	document.write("Наш объект Мотоцикл - " + moto.brand + " " + moto.maxSpeed + "<br><br>")
 
 
 </script>
