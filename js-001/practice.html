@@ -1,0 +1,35 @@
+﻿<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Practics</title>
+</head>
+<body>
+	<label><input type="checkbox" id="chbox1" onchange="fun1()">My first checkbox</label>
+	<label><input type="checkbox" id="chbox2" onclick="alert(&quot; Google &quot;)">Google</label>
+
+    <label><input id="elm" type="checkbox" value="Нажми меня" /> Hello world</label>
+
+    <button onclick="alert(this.innerHTML)">Нажми меня ...</button>
+
+	<script>
+
+
+        function fun1 () {
+            var chbox;
+            chbox = document.getElementById('chbox1');
+
+            if (chbox.checked) {
+                alert('checked');
+            } else {
+                alert('unckecked');
+            }
+        }
+
+        // события ДОМ объекта при клике по id
+        elm.onclick = function () {
+            alert('DOM Hello world!');
+        }
+
+	</script>
+</body>
+</html>
