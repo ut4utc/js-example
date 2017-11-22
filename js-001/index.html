@@ -397,7 +397,7 @@ document.write( "<br><br>" + "********  Условные операторы if,e
 	document.write("<br><br>")
 
 
-	// метод toFixed(2) - позволяет показать кол-во ситволов после запятой
+	// метод toFixed(2) - позволяет показать кол-во символов после запятой
 	document.write( "<br><br>" + "******** метод toFixed(2) - позволяет показать кол-во ситволов после запятой" + "<br><br>")
 		var price = 10.30
 		document.write(price.toFixed(2))
@@ -492,6 +492,41 @@ document.write( "<br><br>" + "******** создание объектов new Obj
 		brand: "Yamaha"
 	}
 	document.write("Наш объект Мотоцикл - " + moto.brand + " " + moto.maxSpeed + "<br><br>")
+
+
+	// Методы в объектах (метод calc у summerTour)
+
+	var summerTour = {
+		turkey: 1000,
+		spain: 2000,
+		egypt: 1000
+	}
+
+	summerTour.calc = function(peoples, days, country) {
+		var result = peoples * days * this[country]
+		return result
+	}
+
+	document.write("// вычисляем стоимость отдыха summerTour.calc(2,14,\"turkey\") <br> ")
+	document.write("Стоимость отдыха = " + summerTour.calc(2,14,"turkey") + "<br><br>")
+
+
+	document.write("Выведем все свойства объекта через цикл for in object : <br>")
+	for (option in summerTour) {
+		document.write(option + ":" + summerTour[option] + "<br><br>")
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
