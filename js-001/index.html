@@ -517,14 +517,65 @@ document.write( "<br><br>" + "******** создание объектов new Obj
 	}
 
 
+// вытаскиваем данные из браузера
+	document.write("***********  Играемся с объектами - вытаскиваем данные из браузера<br><br>")
+	document.write("******************************************************************<br><br>")
+	document.write("******************************************************************<br><br>")
+	
+	for (option in navigator) {
+		document.write(option + " = " + navigator[option] + "<br><br>")
+	}
 
 
+	document.write( "******************************<br><br>")
+	document.write(navigator.userAgent + "<br><br>")
+	document.write(navigator.language + "<br><br>")
+	document.write(navigator.languages + "<br><br>")
+	document.write(navigator.cookieEnabled + "<br><br>")
+	document.write(navigator.onLine + "<br><br>")
+	document.write(navigator.platform + "<br><br>")
 
+	document.write( "******************************<br><br>")
+	document.write( "Screen <br><br>")
+	document.write( "******************************<br><br>")
 
+	for (option in screen) {
+		document.write(option + " = " + screen[option] + "<br><br>")
+	}
+	
+	document.write( "******************************<br><br>")
+	document.write( "Location <br><br>")
+	document.write( "******************************<br><br>")
 
+	for (option in location) {
+		document.write(option + " = " + location[option] + "<br><br>")
+	}
 
+	document.write( "******************************<br><br>")
+	document.write( "С какого браузера к нам зашли? <br><br>")
+	document.write( "******************************<br><br>")
 
+	function whatBrowserIs() {
+		var browser = navigator.userAgent
+		var firefox = /firefox/i
+		var chrome = /Chrome/i
+		var safari = /safari/i
+		var ie = /msie/i
 
+		if (browser.search(firefox) != -1) {
+			document.write("firefox")
+		} else if (browser.search(chrome) != -1) {
+			document.write("chrome")
+		} else if (browser.search(safari) != -1) {
+			document.write("safari")
+		} else if (browser.search(ie) != -1) {
+			document.write("ie")
+		} else {
+			document.write("Браузер не определен")
+		}
+	}
+
+	whatBrowserIs()
 
 
 
