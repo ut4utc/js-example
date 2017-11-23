@@ -21,7 +21,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nobis illum ut iu
 		<li class="liclass">mytext5</li>
 	</ul>
 
-	<img src="img/one.jpg" alt="Hello img">
+	<img id="imgid" src="img/_p.jpg" alt="Hello img">
+	<img src="img/45.png" alt="Hello img">
+	<img src="img/53.jpg" alt="Hello img">
 
 	<ol id="olid">
 		<li class="olclass">myol1</li>
@@ -616,6 +618,13 @@ document.write( "<br><br>" + "******** создание объектов new Obj
 	document.write( "******************************<br><br>")
 	document.write( "Играюсь с getElementById('aSome') <br><br>")
 	document.write( "******************************<br><br>")
+
+	var img = document.getElementsByTagName('img')
+	// alert(img.length)
+
+	var imgid = document.getElementById('imgid')
+	alert(imgid.src)
+	
 
 
 </script>
