@@ -21,9 +21,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nobis illum ut iu
 		<li class="liclass">mytext5</li>
 	</ul>
 
-	<img id="img_1" src="img/_p.jpg" alt="Hello img">
-	<img id="img_2" src="img/45.png" alt="Hello img">
-	<img id="img_3" src="img/53.jpg" alt="Hello img">
+	<div id="for_img">
+		<img id="img_1" src="img/_p.jpg" alt="Hello img1">
+		<img id="img_2" src="img/45.png" alt="Hello img2">
+		<img id="img_3" src="img/53.jpg" alt="Hello img3">
+	</div>
 
 	<ol id="olid">
 		<li class="olclass">myol1</li>
@@ -622,13 +624,18 @@ document.write( "<br><br>" + "******** создание объектов new Obj
 	var img = document.getElementsByTagName('img')
 	// alert(img.length)
 
-	var imgid = document.getElementById('imgid')
+	var imgid = document.getElementById('img_1')
 	// доступ к свойству src
-	 alert(imgid.src)
+	// alert(imgid.src)
 
-
-
-
+	 
+	 var imgDiv = document.getElementById('for_img')
+	 var childImgDiv = imgDiv.childNodes
+	 
+	 for (var i=0; i < childImgDiv.length; i++) {
+	 	document.write(childImgDiv[i].alt + "<br>")
+	 }
+	
 
 
 </script>
