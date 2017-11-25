@@ -8,11 +8,14 @@
 <p>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nobis illum ut iure incidunt officia, ad blanditiis est pariatur totam repudiandae soluta at voluptatibus quas inventore molestiae esse nulla alias?
 </p>
-<div class="mydiv">
+<div id="lorem" class="mydiv">
 	<p class="paragraf">lorem-01</p>
 	<p class="paragraf">lorem-02</p>
 	<p class="paragraf"><span><i class="btn"></i>Date </span>lorem-03</p>
 </div>
+	
+<div id="cool">
+
 	<ul id="ulid">
 		<li class="liclass">mytext1</li>
 		<li class="liclass">mytext2</li>
@@ -20,7 +23,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nobis illum ut iu
 		<li class="liclass">mytext4</li>
 		<li class="liclass">mytext5</li>
 	</ul>
-
+	
 	<div id="for_img">
 		<img id="img_1" src="img/_p.jpg" alt="Hello img1">
 		<img id="img_2" src="img/45.png" alt="Hello img2">
@@ -41,6 +44,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nobis illum ut iu
 		<input type="text" name="inp1" id="inputid1">
 		<input type="submit" name="go" id="btn1">
 	</form>
+
+</div>
+
+<div id="lastid">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem itaque sunt suscipit odit maiores ipsum sequi iste harum ratione, ut, culpa natus laboriosam commodi. Quia recusandae mollitia fugit soluta nemo!</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, est, necessitatibus. Provident harum qui nostrum recusandae dignissimos laboriosam vel velit, praesentium. Enim eveniet ad, ea ab reprehenderit quia neque vel.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate architecto saepe nulla sed tempore at voluptates in, provident placeat dolores iure earum ratione deleniti quam, quasi quas excepturi modi ab.</p>
+</div>
 
 	<br><br>
 
@@ -631,9 +642,19 @@ document.write( "<br><br>" + "******** создание объектов new Obj
 	 
 	 var imgDiv = document.getElementById('for_img')
 	 var childImgDiv = imgDiv.childNodes
-	 
+	 // узнаем parent id
+	 var parentDiv = imgDiv.parentNode
+	 // brother id
+	 var brotherDiv = imgDiv.nextSibling
+	 // previos id
+	 var brotherDiv = imgDiv.previousSibling
+
+	 document.write(parentDiv.id + "<br>")
+	 document.write(brotherDiv + "<br>")
+
 	 for (var i=0; i < childImgDiv.length; i++) {
-	 	document.write(childImgDiv[i].alt + "<br>")
+	 	document.write(childImgDiv[i].id + "<br>")
+	 	
 	 }
 	
 
