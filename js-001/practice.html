@@ -7,17 +7,66 @@
 	<label><input type="checkbox" id="chbox1" onchange="fun1()">My first checkbox</label>
 	<label><input type="checkbox" id="chbox2" onclick="alert(&quot; Google &quot;)">Google</label>
 
-    <label><input id="elm" type="checkbox" value="Нажми меня" /> Hello world</label>
+    <label><input id="elm" type="checkbox" value="Нажми меня elm" /> Hello world</label>
 
     <button onclick="alert(this.innerHTML)">Нажми меня ...</button>
-
+        <br />
+        <br />
     <input id="elem" type="button" value="Нажми меня"/>
+        <br />
+        <br />
+    <select name="" id="sel1" onchange="sel1()">
+        <option value="1">Item 1</option>
+        <option value="2">Item 2</option>
+        <option value="3">Item 3</option>
+        <option value="4">Item 4</option>
+        <option value="5">Item 5</option>   
+    </select>
+    <button id="setDefNum">Установить номер 3 по дефолту</button>
+    
+    <br><br>
+
+    <input type="range" min="0" max="10" step="1" value="0" id="r1" oninput="range1()" list="tickmarks">
+    <datalist id="tickmarks">
+      <option value="0" label="0%">
+      <option value="1">
+      <option value="2">
+      <option value="3">
+      <option value="4">
+      <option value="5" label="50%">
+      <option value="6">
+      <option value="7">
+      <option value="8">
+      <option value="9">
+      <option value="10" label="100%">
+    </datalist>
+    <p id="sometext">0</p>
+
+    <img src="img/53.jpg" id="pic">
+
+    <br><br>
+    
+    <div class="slider-wrapper">
+      <input type="range" min="0" max="11" value="7" step="1">
+    </div>
+    <style>
+        .slider-wrapper {
+          display: inline-block;
+          width: 20px;
+          height: 150px;
+          padding: 0;
+        }
+        .slider-wrapper input {
+          width: 150px;
+          height: 20px;
+          margin: 0;
+          transform-origin: 75px 75px;
+          transform: rotate(-90deg);
+        }
+    </style>
 
 	<script>
-
-
         function fun1 () {
-
             var chbox = document.getElementById('chbox1');
 
             if (chbox.checked) {
@@ -44,6 +93,30 @@
         elem.onclick = function() { alert("Привет"); };
         elem.addEventListener("click", handler1); // Спасибо!
         elem.addEventListener("click", handler2); // Спасибо ещё раз!
+
+        // function for select
+        function sel1() {
+            var sel = document.getElementById('sel1').options.selectedIndex
+            var text = document.getElementById('sel1').options[sel].text
+            var val = document.getElementById('sel1').options[sel].value
+            alert("Выбрана " + text + " номер " + val)
+        }
+
+        function set3() {
+            document.getElementById('sel1').options[2].selected = true
+        }
+
+        setDefNum.addEventListener("click", set3)
+
+        // Range + change pic width
+        function range1() {
+            var rng = document.getElementById('r1')
+            var p = document.getElementById('sometext')
+            p.innerHTML = rng.value
+
+            var img = document.getElementById('pic')
+            img.width = 60 + 20*rng.value
+        }
 
 
     </script>
