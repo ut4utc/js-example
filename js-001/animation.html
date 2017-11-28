@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+<style>
+
+body{
+	width: 100%;
+	height: 100%;
+	/* применить анимацию change */
+    /* продолжительность 3s */
+    /* количество раз: бесконечное (infinite) */
+    /* менять направление анимации каждый раз (alternate) */
+	amimation: change 3s infinite alternate;
+	-webkit-animation: change 3s infinite alternate;
+}
+@keyframes change {
+	0% {
+		background-color: green;
+	}
+	50% {
+		background-color: orange;
+	}
+	100% {
+		background-color: violet;
+	}
+}
+
+/* 
+* 8 свойств анимации
+
+1 animation-name: change; 	// имя для кейфрейма
+2 animatuon-duratiom: 1.5s; // продолжительность анимации для завершения одного цикла 
+3 animation-timing-function: ease-out;	// кривые ускорения
+4 animation-delay: 2s;	// время между загружаемым элементом и последовательностью анимации
+5 animation-direction: alternate;		// задает направление анимации после цикла
+6 animation-iteratiom-count: infinite;	// кол-во раз, сколько анимация должна выполняться
+7 animation-fill-mode: none;			// какие значения выполняются до и после анимации
+8 animation-play-state: running;		// пауза или воспроизведение анимации
+
+*/
+
+
+
+
+</style>
+
+</body>
+</html>
